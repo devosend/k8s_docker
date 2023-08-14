@@ -1,0 +1,37 @@
+workflowName: "few"
+desc: ""
+tenantName: "default"
+timeoutMin: null
+executionStrategy: "PARALLEL"
+globalParams: "[]"
+labelName: null
+cardName: null
+timingName: null
+failureStrategy: null
+warningType: null
+processInstancePriority: null
+workerGroupName: null
+environmentName: null
+warningGroupName: null
+estimatedEndTime: null
+taskGitInfoList:
+- taskName: "11"
+  taskType: "SHELL"
+  taskParams: "{\"localParams\":[],\"rawScript\":\"111\",\"resourceList\":[],\"fieldStr\"\
+    :\"rawScript\",\"dataSourceList\":[],\"ideContentField\":{\"resourceId\":null,\"\
+    field\":\"rawScript\"}}"
+  description: null
+  taskPriority: "MEDIUM"
+  failRetryTimes: null
+  failRetryInterval: null
+  timeout: null
+  timeoutNotifyStrategy: null
+  delayTime: null
+  locationX: null
+  locationY: null
+  workerGroup: null
+  env: null
+  taskGroup: null
+  taskGroupPriority: null
+  localParams: null
+  preTasks: []
